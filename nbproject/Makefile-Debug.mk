@@ -35,7 +35,13 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/ArrayHopper.o \
+	${OBJECTDIR}/LRUCache.o \
+	${OBJECTDIR}/TrapWater.o \
+	${OBJECTDIR}/WildCardMatching.o \
+	${OBJECTDIR}/WordBreak2.o \
+	${OBJECTDIR}/WordLadder.o \
+	${OBJECTDIR}/pow.o
 
 
 # C Compiler Flags
@@ -62,10 +68,40 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/arrayhopper: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/arrayhopper ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/main.o: main.cpp 
+${OBJECTDIR}/ArrayHopper.o: ArrayHopper.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ArrayHopper.o ArrayHopper.cpp
+
+${OBJECTDIR}/LRUCache.o: LRUCache.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/LRUCache.o LRUCache.cpp
+
+${OBJECTDIR}/TrapWater.o: TrapWater.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/TrapWater.o TrapWater.cpp
+
+${OBJECTDIR}/WildCardMatching.o: WildCardMatching.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/WildCardMatching.o WildCardMatching.cpp
+
+${OBJECTDIR}/WordBreak2.o: WordBreak2.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/WordBreak2.o WordBreak2.cpp
+
+${OBJECTDIR}/WordLadder.o: WordLadder.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/WordLadder.o WordLadder.cpp
+
+${OBJECTDIR}/pow.o: pow.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/pow.o pow.cpp
 
 # Subprojects
 .build-subprojects:
